@@ -12,10 +12,14 @@
     },
     "content_scripts": [ {
        "js": [ "content-script.js" ],
+       "matches": ["*://localhost:*/*","*://172.16.15.39:*/*","*://172.16.15.39*/*", "*://www.your-domain.com/*"],
        "all_frames": true,
        "run_at": "document_start",
        "matches": ["*://www.webrtc-experiment.com/*"]
     }],
+    "externally_connectable": {
+      "matches": ["*://localhost:*/*","*://172.16.15.39:*/*","*://172.16.15.39*/*", "*://www.your-domain.com/*"]
+    },
     "icons" : {
         "48" : "icon.png"
     },
